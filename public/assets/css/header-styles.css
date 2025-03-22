@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+
+.navbar{
+    background-color: transparent;
+    position: absolute !important; 
+    width: 100%; 
+    z-index: 10; 
+    
+}
+
+.navbar-brand img{
+    height: 36px;
+}
+
+.navbar-brand{
+    float:left;
+    align-items: center;
+    line-height: 1.2em;
+    margin-left: 10px;
+}
+
+.navbar-nav{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 1.2em;
+    cursor: pointer;
+}
+
+.nav-link{
+    color: white !important;
+    font-family: "Inter Tight", sans-serif;
+    padding: 20px 15px;
+    font-size: 15px;
+}
