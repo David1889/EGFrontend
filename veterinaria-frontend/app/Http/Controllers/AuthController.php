@@ -34,6 +34,7 @@ class AuthController extends Controller
                 session([
                     'user_token' => $data['token'] ?? null,
                     'user_email' => $request->email,
+                    'user_id'    => $data['user']['id'] ?? ($data['id'] ?? 1),
                 ]);
 
                 return redirect()->intended('/');

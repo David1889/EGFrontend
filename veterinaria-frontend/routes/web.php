@@ -22,6 +22,22 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 // CLIENTES
+
+// Formulario de Alta (Mostrar)
+Route::get('/clients/create', [ClientController::class, 'create'])->name('clients.create');
+
+// Procesar el Alta (Guardar)
+Route::post('/clients', [ClientController::class, 'store'])->name('clients.store');
+
+// Formulario de Edición (Trae los datos actuales)
+Route::get('/clients/{id}/edit', [ClientController::class, 'edit'])->name('clients.edit');
+
+// Procesar la Edición (Envía los cambios)
+Route::put('/clients/{id}', [ClientController::class, 'update'])->name('clients.update');
+
+// Ruta para procesar la baja (DELETE)
+Route::delete('/clients/{id}', [ClientController::class, 'destroy'])->name('clients.destroy');
+
 // Listar todos los clientes
 Route::get('/clients', [ClientController::class, 'index'])->name('clients.index');
 

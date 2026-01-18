@@ -3,9 +3,18 @@
 @section('title', 'Listado de Clientes')
 
 @section('content')
+
+@if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+@endif
+
+<div class="card shadow-sm border-0"> ...
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="fw-bold text-primary">Gestión de Clientes</h2>
-    <a href="#" class="btn btn-success">
+    <a href="{{ route('clients.create') }}" class="btn btn-success">
         <i class="bi bi-plus-lg"></i> Nuevo Cliente
     </a>
 </div>
