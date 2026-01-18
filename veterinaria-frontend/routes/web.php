@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\PetController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -43,3 +44,22 @@ Route::get('/clients', [ClientController::class, 'index'])->name('clients.index'
 
 // para obtener solo los datos (HTML parcial)
 Route::get('/clients/list', [ClientController::class, 'list'])->name('clients.list');
+
+
+// MASCOTAS
+
+// Formulario de Alta de Mascota
+Route::get('/pets/create', [PetController::class, 'create'])->name('pets.create');
+// Guardar Mascota
+Route::post('/pets', [PetController::class, 'store'])->name('pets.store');
+
+// Editar Mascota
+Route::get('/pets/{id}/edit', [PetController::class, 'edit'])->name('pets.edit');
+Route::put('/pets/{id}', [PetController::class, 'update'])->name('pets.update');
+
+// Eliminar Mascota
+Route::delete('/pets/{id}', [PetController::class, 'destroy'])->name('pets.destroy');
+
+// Listar todas las mascotas
+Route::get('/pets', [PetController::class, 'index'])->name('pets.index');
+Route::get('/pets/list', [PetController::class, 'list'])->name('pets.list');

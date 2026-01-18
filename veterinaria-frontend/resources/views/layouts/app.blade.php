@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="{{ url('/') }}">
-                🐾 Vet. San Antón
+                San Antón
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -33,6 +33,9 @@
                     @if(session('user_token'))
                         <li class="nav-item">
                             <a class="nav-link text-white" href="{{ route('clients.index') }}">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ route('pets.index') }}">Mascotas</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
