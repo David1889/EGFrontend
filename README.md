@@ -2,7 +2,7 @@
 
 Sistema de gestión para clínica veterinaria desarrollado en **Laravel (Blade + Bootstrap 5)**. Este proyecto actúa como interfaz de usuario (Frontend) y consume datos de una API REST externa.
 
-## 🚀 Requisitos Previos (Fedora / Linux)
+## 🚀 Requisitos Previos
 
 * PHP 8.1 o superior
 * Composer
